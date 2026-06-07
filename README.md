@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Claude Next.js Starter Kit
 
-## Getting Started
+강의 미션용으로 사용하는 최소 구성의 Next.js Starter Kit입니다. 인증, DB 연동,
+결제, 관리자 페이지 등 복잡한 기능 없이 레이아웃 구조와 shadcn/ui 컴포넌트
+사용 예시만 담겨 있습니다.
 
-First, run the development server:
+## 기술 스택
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Next.js](https://nextjs.org) (App Router)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [shadcn/ui](https://ui.shadcn.com)
+
+## 폴더 구조
+
+```
+src/
+├── app/
+│   ├── layout.tsx       # Header / Main / Footer로 감싸는 루트 레이아웃
+│   ├── page.tsx         # 홈 페이지 (Button / Card 사용 예시)
+│   └── globals.css      # Tailwind CSS + shadcn 테마 토큰
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   └── ui/              # shadcn/ui 컴포넌트 (button, card 등)
+└── lib/
+    └── utils.ts         # shadcn cn 유틸
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 시작하기
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+의존성을 설치하고 개발 서버를 실행합니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+[http://localhost:3000](http://localhost:3000)에서 결과를 확인할 수 있습니다.
 
-To learn more about Next.js, take a look at the following resources:
+`src/app/page.tsx`를 수정하면서 미션을 진행하면 됩니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## shadcn/ui 컴포넌트 추가하기
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+필요한 컴포넌트는 CLI로 추가할 수 있습니다.
 
-## Deploy on Vercel
+```bash
+npx shadcn@latest add <component>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+예를 들어 `dialog` 컴포넌트가 필요하다면 다음과 같이 실행합니다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx shadcn@latest add dialog
+```
+
+추가된 컴포넌트는 `src/components/ui/`에 생성되며, `@/components/ui/<component>`
+경로로 불러와 사용할 수 있습니다.

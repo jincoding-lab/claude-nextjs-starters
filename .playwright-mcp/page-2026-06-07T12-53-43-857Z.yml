@@ -1,0 +1,38 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Claude Next.js Starter
+      - navigation [ref=e5]:
+        - link "Mission" [ref=e6] [cursor=pointer]:
+          - /url: "#"
+        - link "Docs" [ref=e7] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - heading "Claude Next.js Starter Kit" [level=1] [ref=e11]
+        - paragraph [ref=e12]: Next.js, TypeScript, Tailwind CSS, shadcn/ui로 구성된 강의 미션용 스타터 킷입니다. 아래 Card와 Button 예시를 참고해서 미션을 시작해보세요.
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e16]: 미션 1. 페이지 만들기
+            - generic [ref=e17]: App Router 기반으로 새로운 라우트를 추가해보세요.
+          - paragraph [ref=e19]: "`src/app` 아래에 폴더를 만들고 `page.tsx`를 작성하면 새 페이지가 생성됩니다."
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]: 미션 2. 컴포넌트 추가하기
+            - generic [ref=e23]: shadcn/ui CLI로 필요한 컴포넌트를 추가해보세요.
+          - paragraph [ref=e25]: "`npx shadcn@latest add <component>` 명령으로 원하는 컴포넌트를 손쉽게 추가할 수 있습니다."
+      - generic [ref=e26]:
+        - heading "Button 예시" [level=2] [ref=e27]
+        - generic [ref=e28]:
+          - button "Default" [ref=e29]
+          - button "Secondary" [ref=e30]
+          - button "Outline" [ref=e31]
+          - button "Ghost" [ref=e32]
+          - button "Destructive" [ref=e33]
+          - button "Link" [ref=e34]
+  - contentinfo [ref=e35]:
+    - generic [ref=e36]:
+      - generic [ref=e37]: Claude Next.js Starter Kit
+      - generic [ref=e38]: 강의 미션용 스타터 킷 · 자유롭게 수정해서 사용하세요
